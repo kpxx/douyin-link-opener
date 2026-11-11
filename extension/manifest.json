@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "抖音分享链接提取跳转",
+  "version": "1.0.0",
+  "description": "从抖音分享口令文本中提取链接并直接打开，支持剪贴板、右键菜单和地址栏三种方式。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["clipboardRead", "contextMenus", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "提取抖音链接",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "omnibox": { "keyword": "dy" },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+D", "mac": "Alt+D" },
+      "description": "打开插件（自动读取剪贴板）"
+    }
+  }
+}

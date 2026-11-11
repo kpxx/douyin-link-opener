@@ -1,0 +1,11 @@
+{
+  "name": "douyin-link-opener",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension that extracts the URL from Douyin share text and opens it.",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "build": "bash scripts/build.sh"
+  },
+  "license": "MIT"
+}

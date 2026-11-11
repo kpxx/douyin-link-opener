@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 340px; margin: 0; padding: 14px; font: 13px/1.5 -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; color: #222; }
+    h1 { font-size: 15px; margin: 0 0 8px; }
+    textarea { width: 100%; height: 90px; box-sizing: border-box; padding: 6px; border: 1px solid #ccc; border-radius: 6px; resize: vertical; font: inherit; }
+    #result { margin: 8px 0; padding: 6px 8px; background: #f4f4f6; border-radius: 6px; word-break: break-all; min-height: 20px; }
+    #result.ok { color: #0a7d32; }
+    #result.err { color: #c62828; }
+    .row { display: flex; gap: 8px; }
+    button { flex: 1; padding: 7px 0; border: 0; border-radius: 6px; cursor: pointer; font: inherit; }
+    #open { background: #fe2c55; color: #fff; }
+    #open:disabled { opacity: .4; cursor: default; }
+    #copy { background: #e8e8ec; }
+    label { display: block; margin-top: 10px; color: #666; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>抖音分享链接提取</h1>
+  <textarea id="input" placeholder="粘贴抖音分享文本（打开时会自动读取剪贴板）"></textarea>
+  <div id="result">等待输入…</div>
+  <div class="row">
+    <button id="open" disabled>打开链接</button>
+    <button id="copy">复制链接</button>
+  </div>
+  <label><input type="checkbox" id="auto"> 识别到链接后自动跳转</label>
+  <script src="extract.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
